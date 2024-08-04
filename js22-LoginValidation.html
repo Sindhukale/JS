@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myvalid(){
+        var uname=document.myform.username.value;
+        var pass=document.myform.password.value;
+        if(uname=="" || pass==null){
+            alert("Name cant be blank");
+        }
+        else if(pass.length<6){
+            alert("Password must be 6 letters");
+            return false;
+        }
+            return true;
+    }
+    </script>
+</head>
+<body>
+    <form action="Login.html"  name="myform" onsubmit="return myvalid(this)">
+        USER NAME <input id="username" type="text" placeholder="Enter name"/><br>
+        PASSWORD<input id="password" type="password" placeholder="Enter email"/><br>
+        <input type="submit">
+    </form> 
+</body>
+</html>
